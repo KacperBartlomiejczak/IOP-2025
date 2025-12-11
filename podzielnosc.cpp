@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Funkcja obliczająca NWD
+// Zostawiamy funkcję z gałęzi 'obliczenia'
 int nwd(int a, int b) {
     while (b != 0) {
         int temp = b;
@@ -14,7 +14,14 @@ int nwd(int a, int b) {
 int main() {
     int a, b;
     cin >> a >> b;
-    // Zmiana w wypisywaniu - dodajemy NWD
+    
+    // Wstawiamy walidację z gałęzi 'sprawdzanie'
+    if (a <= 0 || b <= 0) {
+        cout << "Blad: Liczby musza byc dodatnie!" << endl;
+        return 0;
+    }
+
+    // Wstawiamy wypisywanie z gałęzi 'obliczenia'
     cout << a << " " << b << " " << nwd(a, b) << endl;
     return 0;
 }
